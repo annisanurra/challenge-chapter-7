@@ -11,6 +11,10 @@ router.get("/register", (req, res) => {
   return res.render("register");
 });
 
+router.get("/login", (req, res) => {
+  return res.render("login");
+});
+
 router.get("/reset-password", (req, res) => {
   return res.render("reset-password");
 });
@@ -34,7 +38,12 @@ router.get("/set-password/:key", async (req, res) => {
   }
 });
 
+router.get("/api/v1/welcome", (req, res) => {
+  return res.render("welcome");
+});
+
 router.post("/api/v1/register", controller.register);
+router.post("/api/v1/login", controller.login);
 router.post("/api/v1/reset-password", controller.resetPassword);
 router.post("/api/v1/set-password", controller.setPassword);
 

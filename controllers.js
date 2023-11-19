@@ -82,7 +82,7 @@ module.exports = {
         maxAge: 60 * 60 * 24 * 30 * 1000,
       });
   
-      res.redirect(`/dashboard`);
+      res.redirect(`/login`);
     } catch (error) {
       next(error);
     }
